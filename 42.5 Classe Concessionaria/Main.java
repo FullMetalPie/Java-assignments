@@ -29,8 +29,34 @@ costo del carburante per ogni km percorso, la potenza per singola ruota motrice
 Pietri Andrea 4AI
 */
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Ciao");
+        Automobile auto = new Automobile();
+        Motociclo moto = new Motociclo();
+        
+        Scanner input = new Scanner(System.in);
+
+        double prezzoGasolio;
+        double prezzoBenzina;
+
+        do {
+            System.out.println("Prezzo al litro del gasolio: ");
+            prezzoGasolio = input.nextDouble();
+        } while (prezzoGasolio <= 0);
+
+        do {
+            System.out.println("Prezzo al litro della benzina: ");
+            prezzoBenzina = input.nextDouble();
+        } while (prezzoBenzina <= 0);
+
+        System.out.println("Inserisci modello auto: ");
+        auto.modello = input.next();
+
+        System.out.println("Inserisci modello moto: ");
+        moto.modello = input.next();
+
+        input.close();
     }
 }
