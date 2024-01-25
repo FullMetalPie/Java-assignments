@@ -27,10 +27,10 @@ Scrivere un main che:
 costo del carburante per ogni km percorso, la potenza per singola ruota motrice
 
 Pietri Andrea 4AI
- */
+*/
 
 public class Main {
     public static void main(String[] args) {
-
+        System.out.println("Ciao");
     }
 }
