@@ -35,7 +35,7 @@ public class Main {
     public static void main(String[] args) {
         Automobile auto = new Automobile();
         Motociclo moto = new Motociclo();
-        
+
         Scanner input = new Scanner(System.in);
 
         double prezzoGasolio;
