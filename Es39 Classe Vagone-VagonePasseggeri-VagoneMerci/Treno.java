@@ -15,6 +15,22 @@ public class Treno {
     }
 
     public void addVagonePasseggeri(VagonePasseggeri vp) {
-        /* Mancante */
+        arrayVagoni = Arrays.copyOf(arrayVagoni, dimensione + 1);
+        arrayVagoni[dimensione - 1] = vp;
+    }
+
+    public void addVagoneMerci(VagoneMerci vm) {
+        arrayVagoni = Arrays.copyOf(arrayVagoni, dimensione + 1);
+        arrayVagoni[dimensione - 1] = vm;
+    }
+
+    public void stampa() {
+        for (int i = 0; i < dimensione; i++) {
+            System.out.println("======================\nVagone " + (i + 1) + ":");
+            System.out.println("Codice vagone: " + arrayVagoni[i].getCodice());
+            System.out.println("Peso a vuoto: " + arrayVagoni[i].getPeso());
+            System.out.println("Azienda costruttrice: " + arrayVagoni[i].getAzienda());
+            System.out.println("Anno di costruzione: " + arrayVagoni[i].getAnno());
+        }
     }
 }
